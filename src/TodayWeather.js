@@ -29,11 +29,11 @@ export default function TodayWeather() {
               {weatherData.currentTemp}
             </span>
             <span className="cf-symbol">
-              <a href="#" className="active">
+              <a href="/" className="active">
                 °C{" "}
               </a>
               |
-              <a href="#" className="inactive">
+              <a href="/" className="inactive">
                 °F
               </a>
             </span>
