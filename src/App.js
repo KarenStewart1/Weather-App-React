@@ -6,19 +6,17 @@ import TodayWeather from "./TodayWeather";
 import FiveDayForecast from "./FiveDayForecast";
 function App() {
   return (
-    <div className="App">
-      <div className="container">
-        <div className="weather-app">
-          <div className="card">
-            <div className="card-body">
-              <Header />
-              <TodayWeather />
-              <SearchForm />
-              <FiveDayForecast />
-            </div>
+    <div className="container">
+      <div className="weather-app">
+        <div className="card">
+          <div className="card-body">
+            <Header />
+            <TodayWeather />
+            <SearchForm />
+            <FiveDayForecast />
           </div>
-          <Footer />
         </div>
+        <Footer />
       </div>
     </div>
   );
