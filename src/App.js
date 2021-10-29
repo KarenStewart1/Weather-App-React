@@ -1,12 +1,25 @@
 import "./App.css";
-import Weather from "./Weather";
-
+import Header from "./Header";
+import Footer from "./Footer";
+import SearchForm from "./SearchForm";
+import TodayWeather from "./TodayWeather";
+import FiveDayForecast from "./FiveDayForecast";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <Weather />
-      </header>
+      <div className="container">
+        <div className="weather-app">
+          <div className="card">
+            <div className="card-body">
+              <Header />
+              <TodayWeather />
+              <SearchForm />
+              <FiveDayForecast />
+            </div>
+          </div>
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 }
