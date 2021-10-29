@@ -1,6 +1,5 @@
 import React from "react";
 import "./TodayWeather.css";
-import axios from "axios";
 
 export default function TodayWeather() {
   let weatherData = {
