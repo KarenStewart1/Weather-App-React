@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import SearchForm from "./SearchForm";
 import TodayWeather from "./TodayWeather";
 import FiveDayForecast from "./FiveDayForecast";
+import "bootstrap/dist/css/bootstrap.css";
 function App() {
   return (
     <div className="container">
