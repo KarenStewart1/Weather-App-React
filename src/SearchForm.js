@@ -1,7 +1,7 @@
 import React from "react";
-import "./SearchForm.css";
 import "bootstrap/dist/css/bootstrap.css";
 
+import "./SearchForm.css";
 export default function SearchForm() {
   return (
     <form>

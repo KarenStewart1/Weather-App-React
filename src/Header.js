@@ -1,4 +1,5 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.css";
 import "./Header.css";
 
 export default function Header() {
