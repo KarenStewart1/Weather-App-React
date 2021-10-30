@@ -1,3 +1,6 @@
+:root {
+  --primary-color: 87, 181, 186;
+}
 .daily-forecast {
   border: solid transparent 1px;
   border-radius: 24px;

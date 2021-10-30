@@ -1,3 +1,7 @@
+:root {
+  --primary-color: 87, 181, 186;
+}
+
 form .search-buttons-bar {
   line-height: 1.9;
   margin-left: 100px;

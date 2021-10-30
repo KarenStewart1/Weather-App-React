@@ -11,6 +11,7 @@ export default function SearchForm() {
             type="search"
             className="enter-city-name form-control shadow-sm"
             placeholder="Enter city name"
+            autoFocus="on"
             autoComplete="off"
           />
         </div>
