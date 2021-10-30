@@ -10,7 +10,7 @@ export default function SearchForm() {
             type="search"
             className="enter-city-name form-control shadow-sm"
             placeholder="Enter city name"
-            autocomplete="off"
+            autoComplete="off"
           />
         </div>
         <div className="col-md-auto search-input-button">
