@@ -11,7 +11,7 @@ export default function ShowWeather(props) {
       <h1>
         <div className="row">
           <div className="col city-name-element">
-            {props.headerInfo.cityName}
+            {props.weatherInfo.cityName}
           </div>
           <FormattedDate />
         </div>

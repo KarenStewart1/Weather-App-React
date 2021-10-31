@@ -5,7 +5,6 @@ import ShowWeather from "./ShowWeather";
 
 export default function GetWeatherInfo(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
-  const [headerData, setHeaderData] = useState({});
   const [city, SetCity] = useState(props.defaultCity);
 
   function searchCity() {
@@ -14,14 +13,9 @@ export default function GetWeatherInfo(props) {
     return "Loading...";
   }
   function handleResponse(response) {
-    setHeaderData({
-      cityName: response.data.name,
-      date: new Date(response.data.dt * 1000),
-      day: "Monday",
-      time: "17:50",
-    });
     setWeatherData({
       ready: true,
+      cityName: response.data.name,
       temperature: Math.round(response.data.main.temp),
       humidity: response.data.main.humidity,
       windSpeed: response.data.wind.speed,
@@ -41,7 +35,7 @@ export default function GetWeatherInfo(props) {
   if (weatherData.ready) {
     return (
       <div>
-        <ShowWeather weatherInfo={weatherData} headerInfo={headerData} />
+        <ShowWeather weatherInfo={weatherData} />
         <form onSubmit={handleSubmit}>
           <div className="row justify-content-md-center search-buttons-bar">
             <div className="col col-lg-4 search-bar">
