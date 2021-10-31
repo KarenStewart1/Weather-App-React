@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import FormattedDate from "./FormattedDate";
 import "bootstrap/dist/css/bootstrap.css";
 import "./TodayWeather.css";
 import axios from "axios";
@@ -11,7 +12,7 @@ export default function TodayWeather() {
   function handleResponse(response) {
     setHeaderData({
       cityName: `${response.data.name}`,
-      date: "17 Nov 1989",
+      date: new Date(response.data.dt * 1000),
       day: "Monday",
       time: "17:50",
     });
@@ -32,13 +33,7 @@ export default function TodayWeather() {
         <h1>
           <div className="row">
             <div className="col city-name-element">{headerData.cityName}</div>
-            <div className="col calender-day">
-              <span>{headerData.date}</span>
-              <div className="col day-and-time">
-                {headerData.day}
-                {headerData.time}
-              </div>
-            </div>
+            <FormattedDate />
           </div>
         </h1>
         <div className="row today-weather">

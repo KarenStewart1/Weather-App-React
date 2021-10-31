@@ -11,15 +11,6 @@ h1 .city-name-element {
   padding-left: 15px;
   color: rgba(var(--primary-color), 0.8);
 }
-h1 .calender-day {
-  font-size: 15px;
-  text-align: right;
-  padding-right: 15px;
-  color: rgba(var(--primary-color), 0.8);
-}
-h1 .day-and-time {
-  font-size: 15px;
-}
 .today-weather {
   height: 200px;
   margin: 0 auto;
