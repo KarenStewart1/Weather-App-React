@@ -1,0 +1,15 @@
+.today-weather .cf-symbol {
+  font-size: 22px;
+}
+.today-weather .cf-symbol a {
+  padding: 0;
+  text-decoration: none;
+}
+.today-weather .cf-symbol .active {
+  cursor: default;
+  color: #212529;
+}
+.today-weather .cf-symbol .inactive {
+  color: #63bfbe;
+  opacity: 0.4;
+}

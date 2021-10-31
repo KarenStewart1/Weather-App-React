@@ -2,6 +2,7 @@ import React from "react";
 import FormattedDate from "./FormattedDate";
 import "bootstrap/dist/css/bootstrap.css";
 import WeatherIcon from "./WeatherIcon";
+import Conversion from "./Conversion";
 import "./ShowWeather.css";
 
 export default function ShowWeather(props) {
@@ -27,15 +28,7 @@ export default function ShowWeather(props) {
               <span className="current-temperature">
                 {props.weatherInfo.temperature}
               </span>
-              <span className="cf-symbol">
-                <a href="/" className="active">
-                  °C{" "}
-                </a>
-                |
-                <a href="/" className="inactive">
-                  °F
-                </a>
-              </span>
+              <Conversion />{" "}
             </h2>
             <ul>
               <li className="col today-weather-description">

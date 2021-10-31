@@ -39,25 +39,6 @@ h1 .city-name-element {
   padding-right: 0px;
   width: 190px;
 }
-.today-weather .cf-symbol {
-  font-size: 22px;
-}
-.today-weather .cf-symbol a {
-  padding: 0;
-  text-decoration: none;
-}
-.today-weather .cf-symbol .active {
-  cursor: default;
-  color: #212529;
-}
-.today-weather .cf-symbol .inactive {
-  color: #63bfbe;
-  opacity: 0.4;
-}
-.today-weather .weather-icon {
-  position: relative;
-  top: 45px;
-}
 .today-weather .current-temperature {
   font-size: 52px;
   vertical-align: top;
