@@ -18,14 +18,7 @@ export default function ShowWeather(props) {
       <div className="row today-weather">
         <div className="row-1 left-side">
           <div className="col">
-            <WeatherIcon />
-            <img
-              src={props.weatherInfo.icon}
-              alt={props.weatherInfo.description}
-              className="weather-icon"
-              width="170"
-              height="120"
-            />
+            <WeatherIcon icon={props.weatherInfo.icon} />
           </div>
         </div>
         <div className="row-1 right-side">

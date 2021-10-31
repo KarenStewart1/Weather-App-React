@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
 import ShowWeather from "./ShowWeather";
-import ReactAnimatedWeather from "react-animated-weather";
 
 export default function GetWeatherInfo(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -27,7 +26,7 @@ export default function GetWeatherInfo(props) {
       humidity: response.data.main.humidity,
       windSpeed: response.data.wind.speed,
       description: response.data.weather[0].description,
-      icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
     });
   }
   function handleSubmit(event) {
