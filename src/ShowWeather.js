@@ -17,27 +17,24 @@ export default function ShowWeather(props) {
         </div>
       </h1>
       <div className="row today-weather">
-        <div className="row-1 left-side">
-          <div className="col">
-            <WeatherIcon icon={props.weatherInfo.icon} />
-          </div>
+        <div className="col left-side">
+          <WeatherIcon icon={props.weatherInfo.icon} />
         </div>
-        <div className="row-1 right-side">
-          <div className="col">
-            <Conversion celsiusTemp={props.weatherInfo.temperature} />{" "}
-            <ul>
-              <li className="col today-weather-description">
-                {props.weatherInfo.description}
-              </li>
-              <li>
-                Humidity: <span>{props.weatherInfo.humidity}</span>%
-              </li>
-              <li>
-                Wind: <span>{props.weatherInfo.windSpeed}</span>
-                <span> m/s</span>
-              </li>
-            </ul>
-          </div>
+
+        <div className="col right-side">
+          <Conversion celsiusTemp={props.weatherInfo.temperature} />{" "}
+          <ul>
+            <li className="col today-weather-description">
+              {props.weatherInfo.description}
+            </li>
+            <li>
+              Humidity: <span>{props.weatherInfo.humidity}</span>%
+            </li>
+            <li>
+              Wind: <span>{props.weatherInfo.windSpeed}</span>
+              <span> m/s</span>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
