@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
 import ShowWeather from "./ShowWeather";
+import ReactAnimatedWeather from "react-animated-weather";
 
 export default function GetWeatherInfo(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
