@@ -30,7 +30,7 @@ export default function WeatherIcon(props) {
   };
 
   return (
-    <div className="weather-icon">
+    <div className="weather-icon d-flex justify-content-end">
       <ReactAnimatedWeather
         icon={defaults.icon}
         color={defaults.color}
