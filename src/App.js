@@ -1,16 +1,17 @@
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
-import SearchForm from "./SearchForm";
-import TodayWeather from "./TodayWeather";
+import GetWeatherInfo from "./GetWeatherInfo";
 import FiveDayForecast from "./FiveDayForecast";
-function App() {
+
+export default function App() {
   return (
     <div className="container">
       <div className="weather-app">
         <div className="card">
-          <TodayWeather defaultCity="New York" />
-          <SearchForm />
-          <FiveDayForecast />
+          <div className="card-body">
+            <GetWeatherInfo defaultCity="Amsterdam" />
+            <FiveDayForecast />
+          </div>
         </div>
         <small>
           <a
@@ -27,5 +28,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
