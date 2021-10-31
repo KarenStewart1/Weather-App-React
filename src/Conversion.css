@@ -13,3 +13,11 @@
   color: #63bfbe;
   opacity: 0.4;
 }
+.today-weather .current-temperature {
+  font-size: 52px;
+  vertical-align: top;
+}
+.today-weather h2 {
+  margin-bottom: 0;
+  margin-top: 30px;
+}

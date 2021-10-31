@@ -24,12 +24,7 @@ export default function ShowWeather(props) {
         </div>
         <div className="row-1 right-side">
           <div className="col">
-            <h2>
-              <span className="current-temperature">
-                {props.weatherInfo.temperature}
-              </span>
-              <Conversion />{" "}
-            </h2>
+            <Conversion celsiusTemp={props.weatherInfo.temperature} />{" "}
             <ul>
               <li className="col today-weather-description">
                 {props.weatherInfo.description}
