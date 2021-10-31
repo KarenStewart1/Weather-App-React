@@ -9,7 +9,7 @@ function App() {
     <div className="container">
       <div className="weather-app">
         <div className="card">
-          <TodayWeather />
+          <TodayWeather defaultCity="New York" />
           <SearchForm />
           <FiveDayForecast />
         </div>

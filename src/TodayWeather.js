@@ -4,30 +4,28 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./TodayWeather.css";
 import axios from "axios";
 
-export default function TodayWeather() {
-  const [ready, setReady] = useState(false);
-  const [weatherData, setWeatherData] = useState({});
+export default function TodayWeather(props) {
+  const [weatherData, setWeatherData] = useState({ ready: false });
   const [headerData, setHeaderData] = useState({});
 
   function handleResponse(response) {
     setHeaderData({
-      cityName: `${response.data.name}`,
+      cityName: response.data.name,
       date: new Date(response.data.dt * 1000),
       day: "Monday",
       time: "17:50",
     });
     setWeatherData({
-      temperature: `${Math.round(response.data.main.temp)}`,
-      humidity: `${response.data.main.humidity}`,
-      windSpeed: `${response.data.wind.speed}`,
-      description: `${response.data.weather[0].description}`,
+      ready: true,
+      temperature: Math.round(response.data.main.temp),
+      humidity: response.data.main.humidity,
+      windSpeed: response.data.wind.speed,
+      description: response.data.weather[0].description,
       icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
-
-    setReady(true);
   }
 
-  if (ready) {
+  if (weatherData.ready) {
     return (
       <div className="card-body">
         <h1>
@@ -41,7 +39,7 @@ export default function TodayWeather() {
             <div className="col">
               <img
                 src={weatherData.icon}
-                alt="weather-icon"
+                alt={weatherData.description}
                 className="weather-icon"
                 width="170"
                 height="120"
@@ -82,9 +80,8 @@ export default function TodayWeather() {
       </div>
     );
   } else {
-    let city = "London";
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=b278ff04a20f686b021e62fb800cae6e`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&units=metric&appid=b278ff04a20f686b021e62fb800cae6e`;
     axios.get(url).then(handleResponse);
-    return "hi";
+    return "Loading...";
   }
 }
