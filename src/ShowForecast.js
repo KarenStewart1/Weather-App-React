@@ -18,13 +18,14 @@ export default function ShowForecast(props) {
   let description = props.data[0].weather[0].description;
   let maxTemp = Math.round(props.data[0].temp.max);
   let minTemp = Math.round(props.data[0].temp.min);
+  let icon = props.data[0].weather[0].icon;
   return (
     <div className="row five-day-forecast">
       <div className="col-2 daily-forecast">
         <span className="day">{date}</span>
         <div className="forecast-description">{description}</div>
         <div className="forecast-icons">
-          <WeatherIcon icon="01d" size={80} />
+          <WeatherIcon icon={icon} size={80} />
         </div>
         <div className="forecast-temperature">
           {maxTemp}°<span className="slash"> / </span>
