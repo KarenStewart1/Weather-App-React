@@ -22,15 +22,8 @@ export default function WeatherIcon(props) {
     "50n": "FOG",
   };
 
-  const defaults = {
-    icon: codeMapping[props.icon],
-    color: "black",
-    size: 160,
-    animate: true,
-  };
-
   return (
-    <div className="weather-icon d-flex justify-content-end">
+    <div>
       <ReactAnimatedWeather
         icon={codeMapping[props.icon]}
         color="black"

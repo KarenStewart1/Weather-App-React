@@ -23,7 +23,9 @@ export default function ShowForecast(props) {
       <div className="col-2 daily-forecast">
         <span className="day">{date}</span>
         <div className="forecast-description">{description}</div>
-        <WeatherIcon icon="01d" size={80} />
+        <div className="forecast-icons">
+          <WeatherIcon icon="01d" size={80} />
+        </div>
         <div className="forecast-temperature">
           {maxTemp}°<span className="slash"> / </span>
           {minTemp}°
