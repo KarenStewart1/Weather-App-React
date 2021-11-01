@@ -1,42 +1,6 @@
-:root {
-  --primary-color: 87, 181, 186;
-}
-.daily-forecast {
-  border: solid transparent 1px;
-  border-radius: 24px;
-  margin-left: 15px;
-  margin-right: 15px;
-  padding: 10px 0 10px 0;
-  transition: all 150ms ease-in-out;
-}
-.daily-forecast:hover {
-  border-color: #dde8f8;
-  border: solid 1px #ffe5e5;
-  background: rgba(var(--primary-color), 0.3);
-
-  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 8%);
-}
-.forecast-icons {
-  padding: 10px 0 10px 0;
-}
-
-.forecast-description:first-letter {
-  text-transform: capitalize;
-}
-.forecast-temperature {
-  color: #11324d;
-  font-weight: 600;
-}
 .five-day-forecast {
   font-size: 15px;
   justify-content: center;
   margin: 0 auto;
   padding-top: 40px;
-}
-.day {
-  font-size: 17px;
-  font-weight: bold;
-}
-.slash {
-  font-weight: normal;
 }

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
 import ShowWeather from "./ShowWeather";
+import FiveDayForecast from "./FiveDayForecast";
 
 export default function GetWeatherInfo(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -21,6 +22,8 @@ export default function GetWeatherInfo(props) {
       windSpeed: response.data.wind.speed,
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
+      lon: response.data.coord.lon,
+      lat: response.data.coord.lat,
     });
   }
   function handleSubmit(event) {
@@ -62,6 +65,7 @@ export default function GetWeatherInfo(props) {
             </div>
           </div>
         </form>
+        <FiveDayForecast data={weatherData} />
       </div>
     );
   } else {
