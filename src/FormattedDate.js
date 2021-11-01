@@ -1,7 +1,7 @@
 import React from "react";
 import "./FormattedDate.css";
 
-export default function FormattedDate(props) {
+export default function FormattedDate() {
   let days = [
     "Sunday",
     "Monday",
@@ -32,8 +32,6 @@ export default function FormattedDate(props) {
   let minutes = ("0" + now.getMinutes()).slice(-2);
   let dayNumber = now.getDate();
   let year = now.getFullYear();
-
-  console.log();
 
   return (
     <div className="col calender-day">
