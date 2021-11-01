@@ -13,24 +13,23 @@ export default function ShowForecast(props) {
     "Friday",
     "Saturday",
   ];
-  let dateNumber = new Date(props.data[0].dt * 1000);
+  let dateNumber = new Date(props.data.dt * 1000);
   let date = days[dateNumber.getDay()];
-  let description = props.data[0].weather[0].description;
-  let maxTemp = Math.round(props.data[0].temp.max);
-  let minTemp = Math.round(props.data[0].temp.min);
-  let icon = props.data[0].weather[0].icon;
+  let description = props.data.weather.description;
+  let maxTemp = Math.round(props.data.temp.max);
+  let minTemp = Math.round(props.data.temp.min);
+  let icon = props.data.weather[0].icon;
+
   return (
-    <div className="row five-day-forecast">
-      <div className="col-2 daily-forecast">
-        <span className="day">{date}</span>
-        <div className="forecast-description">{description}</div>
-        <div className="forecast-icons">
-          <WeatherIcon icon={icon} size={80} />
-        </div>
-        <div className="forecast-temperature">
-          {maxTemp}°<span className="slash"> / </span>
-          {minTemp}°
-        </div>
+    <div>
+      <span className="day">{date}</span>
+      <div className="forecast-description">{description}</div>
+      <div className="forecast-icons">
+        <WeatherIcon icon={icon} size={80} />
+      </div>
+      <div className="forecast-temperature">
+        {maxTemp}°<span className="slash"> / </span>
+        {minTemp}°
       </div>
     </div>
   );

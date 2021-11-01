@@ -15,7 +15,15 @@ export default function FiveDayForecast(props) {
   if (ready) {
     return (
       <div className="row five-day-forecast">
-        <ShowForecast data={forecastData} />
+        {forecastData.map(function (dailyForecast, index) {
+          if (index < 5) {
+            return (
+              <div className="col-2 daily-forecast" key={index}>
+                <ShowForecast data={dailyForecast} />
+              </div>
+            );
+          }
+        })}
       </div>
     );
   } else {
@@ -23,6 +31,7 @@ export default function FiveDayForecast(props) {
     let lat = props.data.lat;
     let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude={part}&units=metric&appid=b278ff04a20f686b021e62fb800cae6e`;
     axios.get(url).then(handleForecastResponse);
+    console.log(url);
     return null;
   }
 }
