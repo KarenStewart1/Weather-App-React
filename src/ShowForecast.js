@@ -15,7 +15,7 @@ export default function ShowForecast(props) {
   ];
   let dateNumber = new Date(props.data.dt * 1000);
   let date = days[dateNumber.getDay()];
-  let description = props.data.weather.description;
+  let description = props.data.weather[0].description;
   let maxTemp = Math.round(props.data.temp.max);
   let minTemp = Math.round(props.data.temp.min);
   let icon = props.data.weather[0].icon;

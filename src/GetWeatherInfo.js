@@ -22,8 +22,7 @@ export default function GetWeatherInfo(props) {
       windSpeed: response.data.wind.speed,
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
-      lon: response.data.coord.lon,
-      lat: response.data.coord.lat,
+      coordinates: response.data.coord,
     });
   }
   function handleSubmit(event) {
