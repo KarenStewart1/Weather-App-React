@@ -20,10 +20,6 @@ export default function Conversion(props) {
           <a href="/" className="active" onClick={showCelsius}>
             °C{" "}
           </a>
-          |
-          <a href="/" className="inactive" onClick={showFahrenheit}>
-            °F
-          </a>{" "}
         </span>
       </h2>
     );
@@ -36,10 +32,6 @@ export default function Conversion(props) {
           <a href="/" className="inactive" onClick={showCelsius}>
             °C{" "}
           </a>
-          |
-          <a href="/" className="active" onClick={showFahrenheit}>
-            °F
-          </a>{" "}
         </span>
       </h2>
     );
