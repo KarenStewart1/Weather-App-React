@@ -1,23 +1,13 @@
-.today-weather .cf-symbol {
-  font-size: 22px;
+.conversion {
+  margin-bottom: 0;
+  margin-top: 30px;
+  padding-right: 80px;
 }
-.today-weather .cf-symbol a {
-  padding: 0;
-  text-decoration: none;
-}
-.today-weather .cf-symbol .active {
-  cursor: default;
-  color: #212529;
-}
-.today-weather .cf-symbol .inactive {
-  color: #63bfbe;
-  opacity: 0.4;
-}
-.today-weather .current-temperature {
+.conversion .current-temperature {
   font-size: 52px;
   vertical-align: top;
 }
-.today-weather h2 {
-  margin-bottom: 0;
-  margin-top: 30px;
+.conversion .cf-symbol {
+  font-size: 22px;
+  padding: 0;
 }

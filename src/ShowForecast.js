@@ -29,7 +29,7 @@ export default function ShowForecast(props) {
       </div>
       <div className="forecast-temperature">
         {maxTemp}°<span className="slash"> / </span>
-        {minTemp}°
+        <span className="text-muted"> {minTemp}°</span>
       </div>
     </div>
   );

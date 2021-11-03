@@ -7,14 +7,12 @@ import "./ShowWeather.css";
 
 export default function ShowWeather(props) {
   return (
-    <div className="weather-container">
-      <h1>
-        <div className="row">
-          <div className="col city-name-element">
-            {props.weatherInfo.cityName}
-          </div>
-          <FormattedDate />
+    <div className="showWeather">
+      <h1 className="row">
+        <div className="col city-name-element">
+          {props.weatherInfo.cityName}
         </div>
+        <FormattedDate />
       </h1>
       <div className="row today-weather">
         <div className="col left-side current-weather-icon">

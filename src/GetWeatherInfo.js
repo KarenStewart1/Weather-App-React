@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
 import ShowWeather from "./ShowWeather";
 import FiveDayForecast from "./FiveDayForecast";
+import "./GetWeatherInfo.css";
 
 export default function GetWeatherInfo(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -40,7 +41,7 @@ export default function GetWeatherInfo(props) {
         <ShowWeather weatherInfo={weatherData} />
         <form onSubmit={handleSubmit}>
           <div className="row justify-content-md-center search-buttons-bar">
-            <div className="col col-lg-4 search-bar">
+            <div className="col col-lg-5 search-bar">
               <input
                 type="search"
                 className="enter-city-name form-control shadow-sm"
@@ -56,11 +57,6 @@ export default function GetWeatherInfo(props) {
                 value="Search"
                 className="search-button shadow-sm"
               />
-            </div>
-            <div className="col-md-auto">
-              <button className="current-location-button shadow-sm">
-                Current Location
-              </button>
             </div>
           </div>
         </form>

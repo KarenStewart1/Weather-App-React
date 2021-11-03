@@ -1,0 +1,23 @@
+:root {
+  --primary-color: 87, 181, 186;
+}
+
+form .search-buttons-bar {
+  line-height: 1.9;
+}
+form .search-input-button {
+  padding: 0;
+}
+form .search-button {
+  border-width: 1px;
+  color: #ffffff;
+  border-color: transparent;
+  background-color: rgba(var(--primary-color), 0.7);
+  padding: 4px 15px 4px 15px;
+  border-radius: 7px;
+  border-bottom-left-radius: 0;
+  transition: all 200ms ease-in-out;
+}
+form .search-button:hover {
+  border-radius: 0;
+}
