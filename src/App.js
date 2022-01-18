@@ -20,7 +20,14 @@ export default function App() {
           >
             Open-source code
           </a>{" "}
-          by Karen Stewart
+          by{" "}
+          <a
+            href="https://www.karenstewart.nl"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Karen Stewart
+          </a>
         </small>
       </div>
     </div>
